@@ -1,0 +1,432 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+body{
+    background-color: #012340;
+    display: flex;
+    overflow-x: hidden;
+}
+
+a{
+    text-decoration: none;
+    width: 100%;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+}
+ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+li{
+    padding: 10px;
+    width: 90%;
+    background-color: rgba(138, 43, 226, 0.1);
+    display: flex;
+    border-radius: 5px;
+    /* box-shadow: 1px 6px 13px -3px #000000; */
+}
+
+/* -----------------------------------nav left ---------------------------------------------------- */
+@keyframes enter-l{
+    from{
+        opacity: 0;
+        transform: translateX(-100%);
+        
+    }to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.nav-left{
+    animation: enter-l 0.2s linear;
+    overflow: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 18%;
+    height: 100vh;
+    border: 1px solid black;
+    z-index: 10;
+    background-color: rgba(138, 43, 226, 0.1);
+    box-shadow: 5px 5px 18px 1px rgba(0,0,0,0.7);
+}
+*::-webkit-scrollbar {
+    width: 5px;
+  }
+*::-webkit-scrollbar-track {
+    background: rgb(80, 1, 104);       
+  }
+*::-webkit-scrollbar-thumb {
+    background-color: rgb(126, 3, 207);    
+    border-radius: 20px;       
+    border: 1px solid rgb(0, 0, 0);  
+  }
+.wellcome{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.img-logon{
+    width: 45%;
+}
+.nome{
+    color: white;
+    display: flex;
+    width: 90%;
+    height: 40%;
+    background-color: aqua;
+    border-radius: 5px;
+    background-color: rgba(138, 43, 226, 0.1);
+    box-shadow: 1px 6px 13px -3px #000000;
+    padding: 5px;
+    justify-content: center;
+}
+.nav-bar{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.menu{
+    margin: 30px 10px 30px 10px;
+    /* margin-top: 30px; */
+    width: 100%;
+    /* margin-bottom: 30px; */
+}
+.menu ul li{
+    box-shadow: 1px 6px 13px -3px #000000;
+}
+.i-search{
+    display: flex;
+    justify-content: space-between;
+}
+.sub{
+    cursor: pointer;
+    font-weight: 600;
+}
+.subpes{
+    margin-left: 5px;
+    
+}
+.subpes::placeholder{
+    color: rgba(0, 0, 0, 0.2);
+    font-weight: 600;
+}
+.i-search input{
+    padding: 5px;
+    background-color: rgba(228, 186, 248, 0.5);
+    border: none;
+    border-radius: 5px;
+    
+}
+
+/* -----------------------------------conteudo form cadastro ---------------------------------------------------- */
+/* ----------------------------------- form cadastro admin ---------------------------------------------------- */
+
+.conteudo-admin{
+    color: rgb(255, 255, 255);
+    width: 80%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgb(138, 43, 226);
+    border-radius: 5px;
+    position: relative;
+    transition: 0.2s linear;
+    background: rgba(138, 43, 226, 0.1);
+    box-shadow: 1px 6px 13px -3px #000000;
+}
+.on{
+    display: flex;
+}
+
+.form-admin{
+    display: none;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    padding: 10px;
+}
+.form-admin input{
+    margin: 10px 0px 10px 0px;
+    padding: 10px;
+    border-radius: 5px;
+}
+.btn-admin{
+    border-radius: 3px;
+    margin-top: 15px;
+    background-color: rgba(138, 43, 226, 0.1);
+    border: none;
+    padding: 8px;
+    font-weight:500;
+    transition: linear 0.2s;
+    color: white;
+    box-shadow: 1px 6px 13px -3px #000000;
+    font-size: 1.2em;
+}
+.btn-admin:hover{
+    background-color: rgba(138, 43, 226, 0);
+    filter: drop-shadow(16px 16px 20px red) invert(0%);
+}
+
+.msgadmin{
+    background-color: rgba(252, 179, 23, 0.1);
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 1px 6px 13px -3px #000000;
+    margin-bottom: 20px;
+}
+
+.closeadmin{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    cursor: pointer;
+    font-size: larger;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+}
+
+/* -----------------------------------fim form cad admin ---------------------------------------------------- */
+
+.container{
+    margin: 100px auto 0px auto;
+    display: flex;
+    justify-content: center;
+    max-width: 600px;
+    width: 100%;
+    flex-direction: column;
+}
+.conteudo{
+    color: rgb(255, 255, 255);
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgb(138, 43, 226);
+    border-radius: 5px;
+    position: relative;
+    transform: translateY(-200%);
+    opacity: 0;
+    transition: 0.2s linear;
+    background: rgba(138, 43, 226, 0.1);
+    box-shadow: 1px 6px 13px -3px #000000;
+}
+.msg{
+    background-color: rgba(252, 179, 23, 0.1);
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 1px 6px 13px -3px #000000;
+    margin-bottom: 20px;
+}
+
+.close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    cursor: pointer;
+    font-size: larger;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+}
+
+.form-conteudo{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    padding: 10px;
+}
+.form-conteudo input{
+    margin: 10px 0px 10px 0px;
+    padding: 10px;
+    border-radius: 5px;
+}
+.btn{
+    border-radius: 3px;
+    margin-top: 15px;
+    background-color: rgba(138, 43, 226, 0.1);
+    border: none;
+    padding: 8px;
+    font-weight:500;
+    transition: linear 0.2s;
+    color: white;
+    box-shadow: 1px 6px 13px -3px #000000;
+    font-size: 1.2em;
+}
+.btn:hover{
+    background-color: rgba(138, 43, 226, 0);
+    filter: drop-shadow(16px 16px 20px red) invert(0%);
+}
+
+.dissolve{
+    display: flex;
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* -----------------------------------conteudo form pesquisar ---------------------------------------------------- */
+
+.pesquisar{
+    clear: both;
+    color: rgb(255, 255, 255);
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgb(138, 43, 226);
+    border-radius: 5px;
+    position: relative;
+    transform: translateY(-200%);
+    opacity: 0;
+    transition: 0.2s linear;
+    background: rgba(138, 43, 226, 0.1);
+    box-shadow: 1px 6px 13px -3px #000000;
+}
+
+.pesquisa1{
+    color: rgb(255, 255, 255);
+    width: 500px;
+    display: none;
+    justify-content: center;
+    border: 2px solid rgb(138, 43, 226);
+    border-radius: 5px;
+    position: absolute;
+    background: rgba(138, 43, 226, 0.1);
+    box-shadow: 1px 6px 13px -3px #000000;
+    transition: 1s linear;
+}
+.pesquisa1 table{
+    width: 100%;
+}
+.pesquisa1 table, td, tr,th{
+    border: 1px solid white;
+    text-align: center;
+}
+.closePes{
+    cursor: pointer;
+
+}
+
+/* ---------------------------------------------- Listar  ---------------------------------------------------- */
+
+.listar-all{
+    margin-top: -300px;
+    position: relative;
+    width: 80%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    border: 2px solid rgb(138, 43, 226);
+    background: rgba(138, 43, 226, 0.1);
+    border-radius: 5px;
+    transition: all 0.2s linear;
+}
+.tabela-listar{
+    padding: 10px;
+}
+.tabela-listar thead{
+    background-color: rgba(138, 43, 226, 0.5);
+}
+
+.tabela-listar, th{
+    padding: 5px;
+}
+.closelistar{
+    cursor: pointer;
+}
+
+.atualizar{
+    background: rgba(138, 43, 226, 0.1);
+    color: white;
+    cursor: pointer;
+    padding: 5px;
+}
+.excluir{
+    background: rgba(138, 43, 226, 0.1);
+    color: white;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.esc:nth-child(even){
+    background-color: rgba(138, 43, 226, 0.5);
+
+}
+.closelist{
+    display: none;
+}
+
+/* -----------------------------------Atualizar modal ---------------------------------------------------- */
+
+.atualizar-modal{
+    margin-top: -300px;
+    color: rgb(255, 255, 255);
+    width: 80%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    border: 2px solid rgb(138, 43, 226);
+    border-radius: 5px;
+    position: relative;
+    box-shadow: 1px 6px 13px -3px #000000;
+    background: rgba(138, 43, 226, 0.1);
+    transition: all 0.2s linear;
+}
+.form-atualizar{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin: 10px;
+    padding: 10px;
+}
+.form-atualizar input{
+    margin: 10px 0px 10px 0px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+
+/* -----------------------------------animation squares ---------------------------------------------------- */
+.squares li{
+    box-shadow: none;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(183, 111, 250, 0.1);
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 350px;
+    animation: up 2s infinite;
+    animation-direction: alternate;
+}
+
+@keyframes up{
+    from{
+        opacity: 0;
+        transform: translateY(0);
+    }
+    50%{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+        transform: translateY(-1000px) rotate(960deg);
+    }
+}

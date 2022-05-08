@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+body{
+    background-color: #012340;
+    display: flex;
+    justify-content: center;
+    overflow-x: hidden;
+}
+*::-webkit-scrollbar {
+    width: 5px;
+  }
+*::-webkit-scrollbar-track {
+    background: rgb(80, 1, 104);       
+  }
+*::-webkit-scrollbar-thumb {
+    background-color: rgb(126, 3, 207);    
+    border-radius: 20px;       
+    border: 1px solid rgb(0, 0, 0);  
+  }
+/* ------------------------------------------------form------------------------------------------------ */
+
+@keyframes init {
+    from{
+        transform: scale(0.8);
+        opacity: 0;
+    }50%{
+        /* transform: scale(1.1); */
+    }
+    to{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.container{
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 280px;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid rgb(138, 43, 226);
+    margin-top: 200px;
+    background-color: rgba(138, 43, 226, 0.1);
+    color: white;
+    animation: init 0.3s;
+    animation-delay: 0;
+}
+form{
+    width: 80%;
+}
+
+input{
+    padding: 3px;
+    border-radius: 5px;
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    margin: 5px 0px 5px 0px;
+}
+
+.btn{
+    margin-top: 15px;
+    background-color: rgba(138, 43, 226, 0.1);
+    border: none;
+    padding: 5px;
+    font-weight:500;
+    transition: linear 0.2s;
+    color: white;
+    box-shadow: 1px 6px 13px -3px #000000;
+}
+.btn:hover{
+    background-color: rgba(138, 43, 226, 0);
+    filter: drop-shadow(16px 16px 20px red) invert(75%);
+}
+label{
+    font-weight:500;
+}
+.img-logon{
+    width: 80%;
+    position: relative;
+    margin-top: -50%;
+}
+
+.f-msg{
+    text-align: center;
+    border-radius: 5px;
+    width: 80%;
+    display: block;
+    margin-top: 10px;
+    background-color: rgb(242, 167, 27, 0.8);
+}
+
+/* -----------------------------------animation squares ---------------------------------------------------- */
+.squares li{
+    width: 40px;
+    height: 40px;
+    background-color: rgba(183, 111, 250, 0.1);
+    display: block;
+    position: absolute;
+    bottom: 0;
+    margin-left: -350px;
+    animation: up 2s infinite;
+    animation-direction: alternate;
+}
+
+@keyframes up{
+    from{
+        opacity: 0;
+        transform: translateY(0);
+    }
+    50%{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+        transform: translateY(-1000px) rotate(960deg);
+    }
+}
